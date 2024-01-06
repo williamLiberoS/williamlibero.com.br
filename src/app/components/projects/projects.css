@@ -1,0 +1,14 @@
+.project-image {
+  width: 350px !important;
+  height: 200px !important;
+}
+
+.project-card {
+  height: 325px;
+}
+
+.project-title {
+  font-weight: 700;
+  font-size: 1em;
+  margin-bottom: 10px;
+}

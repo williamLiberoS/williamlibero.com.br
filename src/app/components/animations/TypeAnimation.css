@@ -1,0 +1,65 @@
+.typedAnimationContainer {
+  width: 46%;
+}
+
+.animated-icon-missed {
+  width: fit-content;
+  position: absolute;
+  top: 17em;
+  left: 72vw;
+  animation-name: example;
+  animation-duration: 2s;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.animated-icon-missed.disappear {
+  opacity: 0;
+  height: 0;
+}
+
+.animated-icon-missed1 {
+  width: fit-content;
+  position: absolute;
+  top: 17em;
+  left: 72vw;
+  animation-name: example;
+  animation-duration: 2s;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.animated-icon-missed1.disappear {
+  opacity: 0;
+  height: 0;
+}
+
+.animated-icon-correct {
+  width: fit-content;
+  position: absolute;
+  top: 17em;
+  left: 72vw;
+  animation-name: example;
+  animation-duration: 2s;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.animated-icon-correct.disappear {
+  opacity: 0;
+  height: 0;
+}
+
+@keyframes example {
+  from {
+    left: 71.5vw;
+    opacity: 1;
+  }
+  to {
+    left: 73vw;
+    opacity: 0;
+  }
+}
