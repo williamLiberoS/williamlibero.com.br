@@ -29,7 +29,7 @@ export default function Home() {
         <Articles/>
       </section>
       <div className="matrix-container" ref={matrixContainerRef}>
-        <Matrix matrixContainerRef={matrixContainerRef}/>
+        <Matrix targetRef={matrixContainerRef}/>
       </div>
     </section>
   )
