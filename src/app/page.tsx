@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from "react";
+import React, { useState, useEffect , useRef } from "react";
 import { Roboto } from 'next/font/google'
 import Projects from "./components/projects/Projects";
 import Skills from "./components/skills/Skills";
@@ -10,6 +10,15 @@ import './custom.css'
 
 export default function Home() {  
   const matrixContainerRef = useRef(null);
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
 
   return (
     <section className="flex flex-col items-center justify-between">
@@ -17,7 +26,7 @@ export default function Home() {
         <TypeAnimations/>
       </section>
       <section id="projectsSection" className="w-1/2 h-full mt-32">
-        <h1 className="text-2xl font-bold">Projetos</h1>
+        <h1 className="text-2xl font-bold relative">Projetos</h1>
         <Projects/>
       </section>
       <section id="skillsSection" className="w-1/2 h-full">
@@ -28,9 +37,6 @@ export default function Home() {
         <h1 className="text-2xl font-bold">Artigos</h1>
         <Articles/>
       </section>
-      <div className="matrix-container" ref={matrixContainerRef}>
-        <Matrix matrixContainerRef={matrixContainerRef}/>
-      </div>
     </section>
   )
 }

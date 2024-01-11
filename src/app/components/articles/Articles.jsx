@@ -27,7 +27,7 @@ export default function Articles() {
   ];
 
   return (
-    <div className="grid mt-6 text-center gap-1 grid-cols-3 w-full">
+    <div className="articles-container grid mt-6 text-center gap-1 grid-cols-3 w-full">
       {list.map((item, index) => (
         <div key={item.id}>
           <Card shadow="sm" key={index} isPressable onPress={() => window.open(item.link, "blank")} className="project-card w-full mb-3">

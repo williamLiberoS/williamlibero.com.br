@@ -12,3 +12,50 @@
   font-size: 1em;
   margin-bottom: 10px;
 }
+
+@media screen and (max-width: 1746px) {
+  #projectsSection {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  #projectsSection {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  #projectsSection {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #projectsSection {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .projects-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .projects-container {
+    width: 75% !important;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+
+  .generic-container {
+    align-items: center !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .projects-container {
+    width: 95% !important;
+  }
+}

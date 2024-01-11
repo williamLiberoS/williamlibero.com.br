@@ -1,17 +1,24 @@
 .typedAnimationContainer {
-  width: 46%;
+  flex-flow: column;
+  justify-content: center;
+  padding: 0 21vw;
+}
+
+.typeAnimationText {
+  font-size: 1.9vw !important;
 }
 
 .animated-icon-missed {
   width: fit-content;
-  position: absolute;
-  top: 17em;
-  left: 72vw;
+  float: left;
+  position: relative;
+  left: 0;
+  top: -0.3vw;
   animation-name: example;
   animation-duration: 2s;
   visibility: visible;
   opacity: 1;
-  transition: opacity 1s ease-out;
+  transition: opacity 0.9s ease-out;
 }
 
 .animated-icon-missed.disappear {
@@ -21,14 +28,15 @@
 
 .animated-icon-missed1 {
   width: fit-content;
-  position: absolute;
-  top: 17em;
-  left: 72vw;
+  float: left;
+  position: relative;
+  left: 0;
+  top: -0.3vw;
   animation-name: example;
   animation-duration: 2s;
   visibility: visible;
   opacity: 1;
-  transition: opacity 1s ease-out;
+  transition: opacity 0.9s ease-out;
 }
 
 .animated-icon-missed1.disappear {
@@ -37,15 +45,20 @@
 }
 
 .animated-icon-correct {
-  width: fit-content;
-  position: absolute;
-  top: 17em;
-  left: 72vw;
+  width: 50px;
+  float: left;
+  position: relative;
+  left: 0;
+  top: -0.6vw;
   animation-name: example;
   animation-duration: 2s;
   visibility: visible;
   opacity: 1;
-  transition: opacity 1s ease-out;
+  transition: opacity 0.9s ease-out;
+}
+
+.animated-icon-correct img {
+  width: 100%;
 }
 
 .animated-icon-correct.disappear {
@@ -55,11 +68,67 @@
 
 @keyframes example {
   from {
-    left: 71.5vw;
+    left: 0;
     opacity: 1;
   }
   to {
-    left: 73vw;
+    left: 2vw;
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .typedAnimationContainer {
+    padding: 0 16vw;
+  }
+
+  .typeAnimationText {
+    font-size: 2vw !important;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .typedAnimationContainer {
+    padding: 0 16vw;
+  }
+
+  .typeAnimationText {
+    font-size: 2.2vw !important;
+  }
+}
+
+@media screen and (max-width: 1145px) {
+  .typedAnimationContainer {
+    padding: 0 10vw;
+  }
+
+  .typeAnimationText {
+    font-size: 2.4vw !important;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .typedAnimationContainer {
+    padding: 0 5vw;
+  }
+
+  .typeAnimationText {
+    font-size: 2.8vw !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .typeAnimationText {
+    font-size: 4vw !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .typedAnimationContainer {
+    padding: 0 0vw;
+  }
+
+  .typeAnimationText {
+    font-size: 4.5vw !important;
   }
 }

@@ -1,4 +1,5 @@
 import {useEffect, useRef} from "react";
+import "./MatrixAnimation.css"
 
 export default function Header(matrixContainerRef) {
   const canvasRef = useRef(null);
@@ -50,6 +51,6 @@ export default function Header(matrixContainerRef) {
   
   
   return (
-    <canvas width="auto" height="auto" id="canv" ref={canvasRef} />
+    <canvas className="matrix-animation" width="auto" height="auto" id="canv" ref={canvasRef} />
   )
 }
