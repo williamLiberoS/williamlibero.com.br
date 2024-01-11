@@ -1,7 +1,7 @@
 import {useEffect, useRef} from "react";
 import "./MatrixAnimation.css"
 
-export default function Header(matrixContainerRef) {
+export default function Header(targetRef) {
   const canvasRef = useRef(null);
   // Get the canvas node and the drawing context
   // const canvas = document.getElementById('canv');
@@ -11,8 +11,8 @@ export default function Header(matrixContainerRef) {
       const ctx = canvas.getContext('2d');
 
       // set the width and height of the canvas
-      const w = canvas.width = matrixContainerRef.matrixContainerRef.current.offsetWidth;
-      const h = canvas.height = matrixContainerRef.matrixContainerRef.current.offsetHeight;
+      const w = canvas.width = targetRef.matrixContainerRef.current.offsetWidth;
+      const h = canvas.height = targetRef.matrixContainerRef.current.offsetHeight;
       
       // draw a black rectangle of width and height same as that of the canvas
       ctx.fillStyle = 'transparent';
