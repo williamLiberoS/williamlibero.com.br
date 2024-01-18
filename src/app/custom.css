@@ -38,6 +38,7 @@
   justify-content: center;
   display: flex;
   margin-left: 1vw;
+  flex-flow: column;
 }
 
 .page-sections ul {
@@ -58,18 +59,11 @@
   color: #4c8df5;
 }
 
-#skillsSection {
-  margin-top: 3%;
-}
-
-#articlesSection {
-  margin-top: 3%;
-}
-
 .custom-type-animation-cursor::after {
   content: "|";
   animation: cursor 1.1s infinite step-start;
 }
+
 @keyframes cursor {
   50% {
     opacity: 0;

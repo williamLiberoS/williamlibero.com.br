@@ -1,0 +1,61 @@
+.freelance-image {
+  width: 350px !important;
+  height: 200px !important;
+}
+
+.freelance-card {
+  height: fit-content;
+}
+
+.freelance-title {
+  font-weight: 700;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1746px) {
+  #freelancesSection {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  #freelancesSection {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  #freelancesSection {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #freelancesSection {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .freelances-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .freelances-container {
+    width: 75% !important;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+
+  .generic-container {
+    align-items: center !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .freelances-container {
+    width: 95% !important;
+  }
+}

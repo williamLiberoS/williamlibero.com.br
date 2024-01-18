@@ -51,7 +51,7 @@ export default function Header() {
           paddingBottom: '15px'
         }
       : {
-          backgroundColor: 'rgb(243, 244, 246, 0.8)', 
+          backgroundColor: 'rgb(15, 23, 42, 0.8)', 
           borderColor: 'black', 
           color: 'white', 
           backdropFilter: 'blur(5px)',
@@ -105,12 +105,11 @@ export default function Header() {
     }
   }
 
-  const _definesUserViewport = (e) => {
-
-  }
-
   useEffect(() => {
     setMounted(true);
+    if(theme == 'dark'){
+      setIsSelected(true)
+    }
     _animateStickyNavbar();
     window.addEventListener('mousemove', _mouseMove);
     window.addEventListener('scroll', _animateStickyNavbar);
@@ -178,7 +177,20 @@ export default function Header() {
                 <span className={roboto.className+" font-bold text-2xl"}> Libero</span>
               </div>
 
-              <div></div>
+              <div className='h-fit flex justify-between items-center'>
+                <SunIcon style={{ 'opacity': !isSelected ? '1' : '0.5' }}/>
+                <Switch
+                  isSelected={isSelected}
+                  onValueChange={setIsSelected}
+                  onClick={() => !isSelected ? setTheme('dark') : setTheme('light')}
+                  defaultSelected
+                  size="lg"
+                  color="primary"
+                  className="ml-3 mr-1"
+                >
+                </Switch>
+                <MoonIcon style={{ 'opacity': isSelected ? '1' : '0.5' }}/>
+              </div>
             </div>
           </NavbarContent>
 
@@ -186,10 +198,11 @@ export default function Header() {
             {menuItems.map((item, index) => (
               <NavbarMenuItem key={`${item}-${index}`}>
                 <Link
-                  color='black'
-                  className="w-full no-underline text-slate-950	"
+                  color={mobileMenuContentColors.color}
+                  className="w-full no-underline light:text-slate-950"
                   href="#"
                   size="lg"
+                  style={{color: theme == 'light' ? 'black' : 'white'}}
                 >
                   {item}
                 </Link>
