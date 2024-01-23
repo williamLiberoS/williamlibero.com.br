@@ -17,23 +17,22 @@ const roboto = Roboto({
 
 export default function Experience() {
   return (
-    <div className="skills-container mt-3 text-center w-full">
+    <div className="experiences-container mt-3 text-center w-full">
       <div
         className="flex items-start justify-center mb-6"
         style={{ flexFlow: "column" }}
       >
-        <div className="flex">
+        <div className="flex items-center justify-center">
           <Image
             width={50}
             src="images/kenny_idiomas.png"
-            alt="NextUI Album Cover"
-            classNames="mr-5"
+            classNames="mr-5 job-img"
           />
           <div className="flex items-start" style={{ flexFlow: "column" }}>
-            <span className="ml-2 mt-3 font-semibold text-xl">
+            <span className="ml-2 mt-3 font-semibold text-sm md:text-xl">
               Kenny Idiomas - Full Stack Developer
             </span>
-            <div className="flex">
+            <div className="flex" style={{ flexFlow: "wrap" }}>
               <span className="ml-2 mt-3 font-normal text-xs rounded-lg border-2 p-1 w-fit">
                 Git
               </span>
@@ -65,18 +64,17 @@ export default function Experience() {
         className="flex items-start justify-center mb-6"
         style={{ flexFlow: "column" }}
       >
-        <div className="flex">
+        <div className="flex items-center justify-center">
           <Image
             width={50}
             src="images/despnet.jpeg"
-            alt="NextUI Album Cover"
-            classNames="mr-5"
+            classNames="mr-5 job-img"
           />
           <div className="flex items-start" style={{ flexFlow: "column" }}>
-            <span className="ml-2 mt-3 font-semibold text-xl">
+            <span className="ml-2 mt-3 font-semibold text-sm md:text-xl">
               Despnet - Desenvolvedor PHP Júnior
             </span>
-            <div className="flex">
+            <div className="flex" style={{ flexFlow: "wrap" }}>
               <span className="ml-2 mt-3 font-normal text-xs rounded-lg border-2 p-1 w-fit">
                 PHP
               </span>

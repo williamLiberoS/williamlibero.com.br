@@ -32,7 +32,7 @@ export default function Freelances() {
 
   return (
     <div className="generic-container mt-3 flex flex-col items-end">
-      <div className="freelance-container grid mt-2 text-center gap-1 sm:grid-cols-2 md:grid-cols-3 w-full">
+      <div className="freelance-container grid mt-2 text-center gap-1 max-[500px]:grid-cols-1 max-[780px]:grid-cols-2 grid-cols-3 w-full">
         {list.map((item, index) => (
           <Card
             isPressable

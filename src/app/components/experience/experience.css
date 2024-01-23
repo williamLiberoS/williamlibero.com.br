@@ -1,0 +1,58 @@
+@media screen and (max-width: 1746px) {
+  #experienceSection {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  #experienceSection {
+    width: 69%;
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  #experienceSection {
+    width: 69%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #experienceSection {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #experienceSection {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .experiences-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .experiences-container {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .experiences-container {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .experiences-container {
+    width: 95% !important;
+  }
+}
+
+.job-img{
+  width: 3vw;
+  height: fit-content;
+}

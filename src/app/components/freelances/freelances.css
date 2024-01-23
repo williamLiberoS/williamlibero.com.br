@@ -5,6 +5,7 @@
 
 .freelance-card {
   height: fit-content;
+  width: fit-content;
 }
 
 .freelance-title {
@@ -44,9 +45,11 @@
 }
 
 @media screen and (max-width: 500px) {
-  .freelances-container {
-    width: 75% !important;
-    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  .freelance-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
   }
 
   .generic-container {

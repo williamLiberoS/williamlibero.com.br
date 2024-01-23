@@ -11,7 +11,7 @@
 .header.sticky {
   position: fixed;
   top: 1%;
-  width: 50%;
+  width: 60%;
   border-radius: 50px;
   padding-bottom: 1rem;
   padding-top: 1rem;
@@ -30,7 +30,7 @@
 }
 
 .firstNameSpacer {
-  margin: 0px 5px 0px 10px;
+  margin: 0px 0px 0px 10px;
 }
 
 #aboutMeSection {
@@ -48,11 +48,14 @@
 .page-sections ul li {
   float: left;
   font-size: 1.2em;
-  cursor: pointer;
 }
 
 .page-sections ul li:nth-child(1) ~ * {
   margin-left: 30px;
+}
+
+.list-none li {
+  cursor: pointer;
 }
 
 .list-none li:hover {
@@ -70,16 +73,30 @@
   }
 }
 
-@media screen and (max-width: 1559px) {
+@media screen and (max-width: 1570px) {
   .header.sticky {
-    width: 60%;
+    width: 75%;
     padding: 1rem 1.5rem;
   }
 }
 
-@media screen and (max-width: 1090px) {
+@media screen and (max-width: 1280px) {
+  .profile-picture {
+    width: 50px;
+  }
+
+  .profile-picture-container span {
+    font-size: 1.3em;
+  }
+
+  .page-sections ul li {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 1120px) {
   .header.sticky {
-    width: 75%;
+    width: 85%;
     padding: 1rem 1.5rem;
   }
 }
@@ -88,11 +105,15 @@
   .header {
     padding: 2rem 1.5rem;
   }
-}
-
-@media screen and (max-width: 1080px) {
   .profile-picture-container {
     display: none !important;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .header.sticky {
+    width: 95%;
+    padding: 1rem 1.5rem;
   }
 }
 
@@ -104,6 +125,10 @@
   }
   .profile-picture-container {
     display: flex !important;
+  }
+
+  .firstNameSpacer {
+    margin: 0px 5px 0px 10px;
   }
 }
 

@@ -28,25 +28,35 @@ export default function Footer() {
     {
       id: 1,
       title: "Sobre mim",
-      link: "",
+      link: "#generalContainer",
     },
     {
       id: 2,
       title: "Projetos",
-      link: "",
+      link: "#projectsSection",
     },
     {
       id: 3,
-      title: "Skills",
-      link: "",
+      title: "Artigos",
+      link: "#articlesSection",
     },
     {
       id: 4,
-      title: "Artigos",
-      link: "",
+      title: "Freelances",
+      link: "#freelancesSection",
     },
     {
       id: 5,
+      title: "Skills",
+      link: "#skillsSection",
+    },
+    {
+      id: 6,
+      title: "Experiência",
+      link: "#experienceSection",
+    },
+    {
+      id: 7,
       title: "Currículo",
       link: "",
     },
@@ -84,7 +94,7 @@ export default function Footer() {
           <Link
             key={item.id}
             className="w-full no-underline"
-            href="#"
+            href={item.link}
             size="lg"
             style={{ color: theme == "light" ? "black" : "white" }}
           >
@@ -102,7 +112,8 @@ export default function Footer() {
             <Link
               key={item.id}
               className="w-fit no-underline"
-              href="#"
+              href={item.link}
+              target="blank"
               size="lg"
               style={{ color: theme == "light" ? "black" : "white" }}
             >

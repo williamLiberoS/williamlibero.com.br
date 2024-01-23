@@ -17,3 +17,7 @@
     --portfolio-background: 15, 31, 36;
   }
 }
+
+* {
+  user-select: none;
+}
