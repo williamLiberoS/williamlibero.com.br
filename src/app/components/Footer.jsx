@@ -6,6 +6,7 @@ import { Link, Image } from "@nextui-org/react";
 import { FaGithubSquare } from "react-icons/fa";
 import { GrLinkedin } from "react-icons/gr";
 import { useTheme } from "next-themes";
+import "./footer.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -83,6 +84,7 @@ export default function Footer() {
           width={25}
           src="/images/code.png"
           alt="NextUI Album Cover"
+          className="siteIcon"
         />
         <span className="ml-1">William Libero - Full Stack Developer</span>
       </div>

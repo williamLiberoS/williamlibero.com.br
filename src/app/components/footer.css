@@ -1,0 +1,41 @@
+@media screen and (max-width: 1746px) {
+  .footer-container {
+    width: 60% !important;
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  .footer-container {
+    width: 69% !important;
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  .footer-container {
+    width: 69% !important;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .footer-container {
+    width: 80% !important;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .footer-container {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .siteIcon {
+    width: 5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer-container {
+    width: 95% !important;
+  }
+}

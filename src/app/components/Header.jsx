@@ -271,11 +271,13 @@ export default function Header() {
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
             style={mobileMenuColors}
+            className="navbarcontent"
           >
             <NavbarContent>
               <div className="flex justify-between w-full items-center">
                 <NavbarMenuToggle
                   aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                  style={{ zIndex: "123" }}
                 />
                 <div
                   className="h-fit flex justify-center items-center profile-picture-container"
