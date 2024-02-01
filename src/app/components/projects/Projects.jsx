@@ -15,48 +15,10 @@ export default function Projects() {
   const list = [
     {
       id: 1,
-      title: "How to remove items from an array in JavaScript",
-      subtitle:
-        "A good (hopefully) summary on how to handle data exclusion in Javascript arrays.",
-      img: "/images/js-screen.webp",
-      link: "https://medium.com/@williamliberos/how-to-add-items-to-an-array-in-javascript-58c4539139d0",
-    },
-    {
-      id: 2,
-      title: "How to add items in an array in JavaScript",
-      subtitle: "A quick summary to understand how to add items in arrays.",
-      img: "/images/js_array_methods.webp",
-      link: "https://medium.com/@williamliberos/how-to-add-items-to-an-array-in-javascript-58c4539139d0",
-    },
-    {
-      id: 3,
-      title: "How to remove items from an array in JavaScript",
-      subtitle:
-        "A good (hopefully) summary on how to handle data exclusion in Javascript arrays.",
-      img: "/images/js-screen.webp",
-      link: "https://medium.com/@williamliberos/how-to-add-items-to-an-array-in-javascript-58c4539139d0",
-    },
-    {
-      id: 4,
-      title: "How to add items in an array in JavaScript",
-      subtitle: "A quick summary to understand how to add items in arrays.",
-      img: "/images/js_array_methods.webp",
-      link: "https://medium.com/@williamliberos/how-to-add-items-to-an-array-in-javascript-58c4539139d0",
-    },
-    {
-      id: 5,
-      title: "How to remove items from an array in JavaScript",
-      subtitle:
-        "A good (hopefully) summary on how to handle data exclusion in Javascript arrays.",
-      img: "/images/js-screen.webp",
-      link: "https://medium.com/@williamliberos/how-to-add-items-to-an-array-in-javascript-58c4539139d0",
-    },
-    {
-      id: 6,
-      title: "How to add items in an array in JavaScript",
-      subtitle: "A quick summary to understand how to add items in arrays.",
-      img: "/images/js_array_methods.webp",
-      link: "https://medium.com/@williamliberos/how-to-add-items-to-an-array-in-javascript-58c4539139d0",
+      title: "Open AI Api Playground",
+      subtitle: "Open AI Api integration in a Vue.js 3 app.",
+      img: "/images/projects/openaiapiplayground.PNG",
+      link: "https://open-ai-apis-playground.vercel.app/",
     },
   ];
   const [frontList, setFrontList] = useState([list[0], list[1], list[2]]);
@@ -105,7 +67,7 @@ export default function Projects() {
                 </CardBody>
                 <CardFooter className="flex-col items-center">
                   <p className={roboto.className + " project-title"}>
-                    {item.title} {item.id}
+                    {item.title}
                   </p>
                   <p className={roboto.className + " text-left"}>
                     {item.subtitle.length < 73
