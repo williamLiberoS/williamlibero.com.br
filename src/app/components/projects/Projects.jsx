@@ -65,15 +65,26 @@ export default function Projects() {
                     onPress={() => window.open(item.link, "blank")}
                     className="project-card w-full mb-3"
                   >
-                    <CardBody className="overflow-visible p-0">
-                      <Image
-                        isZoomed
-                        shadow="sm"
-                        radius="lg"
-                        alt={item.title}
-                        className="project-image object-cover"
-                        src={item.image}
-                      />
+                    <CardBody className="overflow-visible p-0 flex items-center">
+                      {item.image != null ? (
+                        <Image
+                          isZoomed
+                          shadow="sm"
+                          radius="lg"
+                          alt={item.title}
+                          className="project-image object-cover"
+                          src={item.image}
+                        />
+                      ) : (
+                        <Image
+                          isZoomed
+                          shadow="sm"
+                          radius="lg"
+                          alt={item.title}
+                          className="project-image-default object-cover"
+                          src="/images/default-project.png"
+                        />
+                      )}
                     </CardBody>
                     <CardFooter className="flex-col items-center">
                       <p className={roboto.className + " project-title"}>
