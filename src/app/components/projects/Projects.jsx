@@ -82,7 +82,7 @@ export default function Projects() {
                           radius="lg"
                           alt={item.title}
                           className="project-image-default object-cover"
-                          src="/images/default-project.png"
+                          src="/images/default_project.png"
                         />
                       )}
                     </CardBody>
