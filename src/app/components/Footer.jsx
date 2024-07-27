@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 import { useState, useEffect } from "react";
 import { Link, Image } from "@nextui-org/react";
 import { FaGithubSquare } from "react-icons/fa";
+import { useSelector } from "react-redux";
 import { GrLinkedin } from "react-icons/gr";
 import { useTheme } from "next-themes";
 import "./footer.css";
@@ -14,55 +15,54 @@ const roboto = Roboto({
 });
 
 export default function Footer() {
+  const language = useSelector((state) => state.language);
   const { theme, setTheme } = useTheme("");
   const [mounted, setMounted] = useState(false);
+  const [footerAnchorItems, setFooterAnchorItems] = useState([]);
+
+  const definesFooterAnchorItems = () => {
+    return [
+      {
+        id: 1,
+        title: language.langText.headerItems.about,
+        link: "#generalContainer",
+      },
+      {
+        id: 2,
+        title: language.langText.headerItems.projects,
+        link: "#projectsSection",
+      },
+      {
+        id: 3,
+        title: language.langText.headerItems.articles,
+        link: "#articlesSection",
+      },
+      {
+        id: 4,
+        title: language.langText.headerItems.freelances,
+        link: "#freelancesSection",
+      },
+      {
+        id: 5,
+        title: language.langText.headerItems.skills,
+        link: "#skillsSection",
+      },
+      {
+        id: 6,
+        title: language.langText.headerItems.experience,
+        link: "#experienceSection",
+      },
+    ];
+  };
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+    setFooterAnchorItems(definesFooterAnchorItems());
+  }, [mounted, language]);
 
   if (!mounted) {
     return null;
   }
-
-  const footerAnchorItems = [
-    {
-      id: 1,
-      title: "Sobre mim",
-      link: "#generalContainer",
-    },
-    {
-      id: 2,
-      title: "Projetos",
-      link: "#projectsSection",
-    },
-    {
-      id: 3,
-      title: "Artigos",
-      link: "#articlesSection",
-    },
-    {
-      id: 4,
-      title: "Freelances",
-      link: "#freelancesSection",
-    },
-    {
-      id: 5,
-      title: "Skills",
-      link: "#skillsSection",
-    },
-    {
-      id: 6,
-      title: "Experiência",
-      link: "#experienceSection",
-    },
-    {
-      id: 7,
-      title: "Currículo",
-      link: "",
-    },
-  ];
-
   const footerSocialItems = [
     {
       id: 1,
@@ -108,7 +108,6 @@ export default function Footer() {
         className="socialContainer border-l-2 flex w-fit pl-3"
         style={{ flexFlow: "column" }}
       >
-        <span>Onde estou:</span>
         <div className="flex">
           {footerSocialItems.map((item, index) => (
             <Link

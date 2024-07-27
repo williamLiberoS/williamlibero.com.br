@@ -2,6 +2,8 @@
 
 import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { Provider } from "react-redux";
+import store from "../app/store/store";
 
 export function ThemeProvider({
   children,
@@ -17,7 +19,7 @@ export function ThemeProvider({
         attribute="class"
         defaultTheme="light"
       >
-        {children}
+        <Provider store={store}>{children}</Provider>
       </NextThemesProvider>
     </NextUIProvider>
   );

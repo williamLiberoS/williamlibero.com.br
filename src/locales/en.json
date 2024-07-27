@@ -1,0 +1,29 @@
+{
+  "sectionTitles": {
+    "projects": "Projects",
+    "articles": "Articles",
+    "freelances": "Freelances",
+    "skills": "Skills",
+    "experience": "Experience"
+  },
+  "activity": {
+    "frontEnd": "With experience in Vue.js, React.js and Next.js, I can create responsive and intuitive interfaces. I strive to provide an efficient user experience. Whether developing a corporate website, an online store or a complex web application.",
+    "backEnd": "On the back-end, I have experience in PHP, Laravel and Nest.js. Through development of logic and integration with databases, I ensure that the applications work effectively behind the behind the scenes. With the skills described, I can create systems, RESTful APIs and manage dynamic content.",
+    "devOps": "I have knowledge of Docker, Docker Compose, Kubernetes, AWS EC2, AWS S3 and AWS EKS technologies."
+  },
+  "wordYear": "year",
+  "wordYears": "years",
+  "experienceText": "of experience",
+  "headerItems": {
+    "about": "About",
+    "projects": "Projects",
+    "articles": "Articles",
+    "freelances": "Freelances",
+    "skills": "Skills",
+    "experience": "Experience"
+  },
+  "experience": {
+    "despnet": "Junior full-stack developer using PHP as the back-end language, MySQL as the database language and HTML5, CSS3, JavaScript, JQuery and Bootstrap on the front-end. <br> Responsible for developing web systems, sites, landing pages and maintaining/updating existing sites.",
+    "kenny": " Full-stack developer using Laravel on the backend, MySQL as database language, Vue.js with TailwindCSS on the frontend and CI/CD with GitHub Actions for automated tests and deployment. <br> Responsible for the entire lifecycle of the web application developed in Vue.js, from requirements gathering for new features, development of new features, deployments into production using Amazon EC2, bug fixes and development of unit tests using Jest. <br> Additionally, I’m responsible for developing and correcting bugs in the back end developed in Laravel and responsible for maintaining integration of the back end with the payment gateway via webhooks"
+  }
+}

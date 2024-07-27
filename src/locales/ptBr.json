@@ -1,0 +1,29 @@
+{
+  "sectionTitles": {
+    "projects": "Projetos",
+    "articles": "Artigos",
+    "freelances": "Freelances",
+    "skills": "Skills",
+    "experience": "Experiência"
+  },
+  "activity": {
+    "frontEnd": "Com experiência em Vue.js, React.js e Next.js, posso criar interfaces responsivas e intuitivas. Busco proporcionar uma experiência de usuário eficiente. Seja desenvolvendo um site corporativo, uma loja virtual ou uma aplicação web complexa.",
+    "backEnd": "No back-end, tenho experiência em Php, Laravel e Nest.js. Através do desenvolvimento da lógica e da integração com o bancos de dados, garanto que as aplicações funcionem de maneira eficaz nos bastidores. E com as habilidades descritas consigo criar sistemas escaláveis, APIs RESTful e gerenciar conteúdo dinâmico.",
+    "devOps": "Tenho conhecimentos nas tecnologias Docker, Docker Compose, Kubernetes, AWS EC2, AWS S3 e AWS EKS."
+  },
+  "wordYear": "ano",
+  "wordYears": "anos",
+  "experienceText": "de experiência",
+  "headerItems": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "articles": "Artigos",
+    "freelances": "Freelances",
+    "skills": "Skills",
+    "experience": "Experiência"
+  },
+  "experience": {
+    "despnet": "Desenvolvedor Full-stack Júnior utilizando PHP como linguagem no back-end, MySQL como linguagem de banco de dados e HTML5, CSS3, JavaScript, JQuery e Bootstrap no front-end. <br> Responsável pelo desenvolvimento de sistemas web, sites, landing pages e manutenção/atualização de sites já existentes.",
+    "kenny": "Desenvolvedor full-stack usando Laravel no back-end, MySQL como linguagem de banco de dados, Vue.js com TailwindCSS no front-end e Jest para testes automatizados. <br> Responsável por todo o ciclo de vida do aplicativo da Web desenvolvido em Vue.js, desde a coleta de requisitos para novos recursos, desenvolvimento de novos recursos, implantações em produção usando o Amazon EC2, correções de bugs e desenvolvimento de testes unitários usando o Jest. <br> Responsável pelo desenvolvimento e correção de bugs no back-end desenvolvido em Laravel, responsável por manter a integração do back-end com o gateway de pagamento via webhooks."
+  }
+}

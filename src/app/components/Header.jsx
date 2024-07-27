@@ -11,12 +11,13 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
 } from "@nextui-org/react";
+import LanguageMenu from "./languageMenu/languageMenu";
 import { MoonIcon } from "../icons/MoonIcon";
 import { SunIcon } from "../icons/SunIcon";
+import { useSelector } from "react-redux";
 import { useTheme } from "next-themes";
 import "../custom.css";
 import "../globals.css";
-import { setTimeout } from "timers";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ const roboto = Roboto({
 });
 
 export default function Header() {
+  const language = useSelector((state) => state.language);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
   const [userViewport, setUserViewport] = useState();
@@ -34,6 +36,7 @@ export default function Header() {
   const headerRef = useRef(null);
   const identityRef = useRef(null);
   const [mounted, setMounted] = useState(false);
+  const [mobileHeaderAnchorItems, setMobileHeaderAnchorItems] = useState([]);
 
   let bgColor =
     theme == "light"
@@ -82,43 +85,40 @@ export default function Header() {
                 rotateX(${offsetY}deg)`,
   };
 
-  const mobileHeaderAnchorItems = [
-    {
-      id: 1,
-      title: "Sobre mim",
-      link: "#generalContainer",
-    },
-    {
-      id: 2,
-      title: "Projetos",
-      link: "#projectsSection",
-    },
-    {
-      id: 3,
-      title: "Artigos",
-      link: "#articlesSection",
-    },
-    {
-      id: 4,
-      title: "Freelances",
-      link: "#freelancesSection",
-    },
-    {
-      id: 5,
-      title: "Skills",
-      link: "#skillsSection",
-    },
-    {
-      id: 6,
-      title: "Experiência",
-      link: "#experienceSection",
-    },
-    {
-      id: 7,
-      title: "Currículo",
-      link: "",
-    },
-  ];
+  const definesMobileHeaderAnchorItems = () => {
+    return [
+      {
+        id: 1,
+        title: language.langText.headerItems.about,
+        link: "#generalContainer",
+      },
+      {
+        id: 2,
+        title: language.langText.headerItems.projects,
+        link: "#projectsSection",
+      },
+      {
+        id: 3,
+        title: language.langText.headerItems.articles,
+        link: "#articlesSection",
+      },
+      {
+        id: 4,
+        title: language.langText.headerItems.freelances,
+        link: "#freelancesSection",
+      },
+      {
+        id: 5,
+        title: language.langText.headerItems.skills,
+        link: "#skillsSection",
+      },
+      {
+        id: 6,
+        title: language.langText.headerItems.experience,
+        link: "#experienceSection",
+      },
+    ];
+  };
 
   const _mouseMove = (e) => {
     let followX = window.innerWidth / 2 - e.clientX;
@@ -155,12 +155,13 @@ export default function Header() {
     window.addEventListener("mousemove", _mouseMove);
     window.addEventListener("scroll", _animateStickyNavbar);
     window.addEventListener("resize", setUserViewport);
+    setMobileHeaderAnchorItems(definesMobileHeaderAnchorItems());
     return () => {
       window.addEventListener("mousemove", _mouseMove);
       window.addEventListener("scroll", _animateStickyNavbar);
       window.addEventListener("resize", setUserViewport);
     };
-  }, [mounted, headerRef]);
+  }, [mounted, headerRef, language]);
 
   if (!mounted) {
     return null;
@@ -227,28 +228,27 @@ export default function Header() {
             <div className="h-fit grid page-sections justify-items-center">
               <ul className="list-none">
                 <li onClick={() => goToClickedSection("generalContainer")}>
-                  Sobre mim
+                  {language.langText.headerItems.about}
                 </li>
                 <li onClick={() => goToClickedSection("projectsSection")}>
-                  Projetos
+                  {language.langText.headerItems.projects}
                 </li>
                 <li onClick={() => goToClickedSection("articlesSection")}>
-                  Artigos
+                  {language.langText.headerItems.articles}
                 </li>
                 <li onClick={() => goToClickedSection("freelancesSection")}>
-                  Freelances
+                  {language.langText.headerItems.freelances}
                 </li>
                 <li onClick={() => goToClickedSection("skillsSection")}>
-                  Skills
+                  {language.langText.headerItems.skills}
                 </li>
                 <li onClick={() => goToClickedSection("experienceSection")}>
-                  Experiência
+                  {language.langText.headerItems.experience}
                 </li>
-                <li>Currículo</li>
               </ul>
             </div>
             <div className="h-fit flex justify-between items-center">
-              <SunIcon style={{ opacity: !isSelected ? "1" : "0.5" }} />
+              <LanguageMenu />
               <Switch
                 isSelected={isSelected}
                 onValueChange={setIsSelected}
@@ -257,10 +257,11 @@ export default function Header() {
                 }
                 defaultSelected
                 size="lg"
-                color="primary"
+                color="warning"
                 className="ml-3 mr-1"
+                startContent={<SunIcon />}
+                endContent={<MoonIcon />}
               ></Switch>
-              <MoonIcon style={{ opacity: isSelected ? "1" : "0.5" }} />
             </div>
           </div>
         ))}
@@ -280,43 +281,46 @@ export default function Header() {
                   style={{ zIndex: "123" }}
                 />
                 <div
-                  className="h-fit flex justify-center items-center profile-picture-container"
+                  className="w-full h-fit flex justify-between items-center profile-picture-container"
                   ref={identityRef}
                 >
-                  <img
-                    width={"70px"}
-                    className="profile-picture"
-                    src="/images/profile-picture.jpeg"
-                    alt=""
-                  />
-                  <span
-                    className={
-                      roboto.className +
-                      " font-bold text-2xl firstName-highlight firstNameSpacer"
-                    }
-                  >
-                    William
-                  </span>
-                  <span className={roboto.className + " font-bold text-2xl"}>
-                    {" "}
-                    Libero
-                  </span>
-                </div>
+                  <div className="header-config-container flex items-center">
+                    <img
+                      width={"70px"}
+                      className="profile-picture"
+                      src="/images/profile-picture.jpeg"
+                      alt=""
+                    />
+                    <span
+                      className={
+                        roboto.className +
+                        " font-bold text-2xl firstName-highlight firstNameSpacer"
+                      }
+                    >
+                      William
+                    </span>
+                    <span className={roboto.className + " font-bold text-2xl"}>
+                      {" "}
+                      Libero
+                    </span>
+                  </div>
 
-                <div className="h-fit flex justify-between items-center">
-                  <SunIcon style={{ opacity: !isSelected ? "1" : "0.5" }} />
-                  <Switch
-                    isSelected={isSelected}
-                    onValueChange={setIsSelected}
-                    onClick={() =>
-                      !isSelected ? setTheme("dark") : setTheme("light")
-                    }
-                    defaultSelected
-                    size="lg"
-                    color="primary"
-                    className="ml-3 mr-1"
-                  ></Switch>
-                  <MoonIcon style={{ opacity: isSelected ? "1" : "0.5" }} />
+                  <div className="h-fit flex justify-between items-center">
+                    <LanguageMenu />
+                    <Switch
+                      isSelected={isSelected}
+                      onValueChange={setIsSelected}
+                      onClick={() =>
+                        !isSelected ? setTheme("dark") : setTheme("light")
+                      }
+                      defaultSelected
+                      size="lg"
+                      color="warning"
+                      className="ml-3 mr-1"
+                      startContent={<SunIcon />}
+                      endContent={<MoonIcon />}
+                    ></Switch>
+                  </div>
                 </div>
               </div>
             </NavbarContent>
