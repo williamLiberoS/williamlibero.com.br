@@ -6,7 +6,7 @@ import { Card, CardBody, CardFooter, Image, Button } from "@nextui-org/react";
 import ShowMoreButton from "../ShowMoreButton";
 import ShowLessButton from "../ShowLessButton";
 import "./projects.css";
-import useSWR from "swr";
+import {projects} from "./projects.js";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -18,18 +18,18 @@ const roboto = Roboto({
 export default function Projects() {
   const [rawList, setRawList] = useState();
   const [frontList, setFrontList] = useState();
-  const { data } = useSWR("/projects", fetcher);
+  const projectsJson = projects;
 
   useEffect(() => {
-    if (data != undefined && rawList == undefined && frontList == undefined) {
-      setRawList(data.data.projects);
+    if (projectsJson != undefined && rawList == undefined && frontList == undefined) {
+      setRawList(projectsJson);
       setFrontList([
-        data.data.projects[0],
-        data.data.projects[1],
-        data.data.projects[2],
+        projectsJson[0],
+        projectsJson[1],
+        projectsJson[2],
       ]);
     }
-  }, [data, rawList, frontList]);
+  }, [projectsJson, rawList, frontList]);
 
   const pushItemToListFront = () => {
     var index = 0;
