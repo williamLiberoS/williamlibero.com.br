@@ -19,7 +19,7 @@ const roboto = Roboto({
 export default function Activity(props) {
   return (
     <div className="generic-container w-4/5 flex flex-col items-center justify-center">
-      <span className="text-2xl font-bold relative">Áreas de atuação</span>
+      <span className="text-2xl font-bold relative">{props.language.langText.activity.sectionTitle}</span>
       <div className="grid lg:grid-cols-3 lg:gap-3 mt-5 w-full">
         <div
           className="w-full flex items-center border-2 rounded-md p-4 shadow-md lg:mt-0 mt-5"

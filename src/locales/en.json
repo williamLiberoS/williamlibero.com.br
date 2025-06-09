@@ -7,6 +7,7 @@
     "experience": "Experience"
   },
   "activity": {
+    "sectionTitle": "Stacks",
     "frontEnd": "With experience in Vue.js, React.js and Next.js, I can create responsive and intuitive interfaces. I strive to provide an efficient user experience. Whether developing a corporate website, an online store or a complex web application.",
     "backEnd": "On the back-end, I have experience in PHP, Laravel and Nest.js. Through development of logic and integration with databases, I ensure that the applications work effectively behind the behind the scenes. With the skills described, I can create systems, RESTful APIs and manage dynamic content.",
     "devOps": "I have knowledge of Docker, Docker Compose, Kubernetes, AWS EC2, AWS S3 and AWS EKS technologies."

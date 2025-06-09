@@ -20,7 +20,7 @@ export default function Projects(props) {
     {
       id: 1,
       title: "Vue.js",
-      experience: `3 ${props.language.langText.wordYears} ${props.language.langText.experienceText}`,
+      experience: `4 ${props.language.langText.wordYears} ${props.language.langText.experienceText}`,
       subtitle:
         "A good (hopefully) summary on how to handle data exclusion in Javascript arrays.",
       img: "/images/skills/vue-js.svg",
@@ -53,7 +53,7 @@ export default function Projects(props) {
     {
       id: 5,
       title: "Laravel",
-      experience: `3 ${props.language.langText.wordYears} ${props.language.langText.experienceText}`,
+      experience: `4 ${props.language.langText.wordYears} ${props.language.langText.experienceText}`,
       subtitle: "A quick summary to understand how to add items in arrays.",
       img: "SiLaravel",
       link: "https://medium.com/@williamliberos/how-to-add-items-to-an-array-in-javascript-58c4539139d0",
@@ -61,7 +61,7 @@ export default function Projects(props) {
     {
       id: 6,
       title: "PHP",
-      experience: `4 ${props.language.langText.wordYears} ${props.language.langText.experienceText}`,
+      experience: `5 ${props.language.langText.wordYears} ${props.language.langText.experienceText}`,
       subtitle: "A quick summary to understand how to add items in arrays.",
       img: "SiPhp",
       link: "https://medium.com/@williamliberos/how-to-add-items-to-an-array-in-javascript-58c4539139d0",
@@ -77,7 +77,7 @@ export default function Projects(props) {
     {
       id: 8,
       title: "MySQL",
-      experience: `4 ${props.language.langText.wordYears} ${props.language.langText.experienceText}`,
+      experience: `5 ${props.language.langText.wordYears} ${props.language.langText.experienceText}`,
       subtitle: "A quick summary to understand how to add items in arrays.",
       img: "/images/skills/mysql.svg",
       link: "https://medium.com/@williamliberos/how-to-add-items-to-an-array-in-javascript-58c4539139d0",
@@ -85,7 +85,7 @@ export default function Projects(props) {
     {
       id: 9,
       title: "Tailwind CSS",
-      experience: `2 ${props.language.langText.wordYears} ${props.language.langText.experienceText}`,
+      experience: `4 ${props.language.langText.wordYears} ${props.language.langText.experienceText}`,
       subtitle: "A quick summary to understand how to add items in arrays.",
       img: "/images/skills/tailwindcss.svg",
       link: "https://medium.com/@williamliberos/how-to-add-items-to-an-array-in-javascript-58c4539139d0",

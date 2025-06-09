@@ -207,7 +207,7 @@ export default function Header() {
               <img
                 width={"70px"}
                 className="profile-picture"
-                src="/images/profile-picture.jpeg"
+                src="/images/profile-picture.jpg"
                 alt=""
               />
               <div style={offset}>

@@ -7,6 +7,7 @@
     "experience": "Experiência"
   },
   "activity": {
+    "sectionTitle": "Áreas de atuação",
     "frontEnd": "Com experiência em Vue.js, React.js e Next.js, posso criar interfaces responsivas e intuitivas. Busco proporcionar uma experiência de usuário eficiente. Seja desenvolvendo um site corporativo, uma loja virtual ou uma aplicação web complexa.",
     "backEnd": "No back-end, tenho experiência em Php, Laravel e Nest.js. Através do desenvolvimento da lógica e da integração com o bancos de dados, garanto que as aplicações funcionem de maneira eficaz nos bastidores. E com as habilidades descritas consigo criar sistemas escaláveis, APIs RESTful e gerenciar conteúdo dinâmico.",
     "devOps": "Tenho conhecimentos nas tecnologias Docker, Docker Compose, Kubernetes, AWS EC2, AWS S3 e AWS EKS."
