@@ -15,19 +15,7 @@ export default function Freelances() {
       title: "Alarcon Advogados",
       img: "/images/freelances/alarcon.webp",
       link: "https://alarconadvogados.com/",
-    },
-    {
-      id: 2,
-      title: "Chicken Pop",
-      img: "/images/freelances/chickenpop.png",
-      link: "https://chickenpop.com.br/",
-    },
-    {
-      id: 3,
-      title: "Evidence Surfboards",
-      img: "/images/freelances/evidence.png",
-      link: "https://www.evidencesurfboards.com.br/",
-    },
+    }
   ];
 
   return (

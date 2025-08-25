@@ -67,7 +67,7 @@ export default function Footer() {
     {
       id: 1,
       title: "Github",
-      link: "https://github.com/William-Libero",
+      link: "https://github.com/williamLiberoS",
     },
     {
       id: 2,

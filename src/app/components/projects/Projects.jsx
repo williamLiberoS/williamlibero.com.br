@@ -1,4 +1,4 @@
-"use client";
+
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { Roboto } from "next/font/google";
@@ -6,7 +6,7 @@ import { Card, CardBody, CardFooter, Image, Button } from "@nextui-org/react";
 import ShowMoreButton from "../ShowMoreButton";
 import ShowLessButton from "../ShowLessButton";
 import "./projects.css";
-import {projects} from "./projects.js";
+import {projects} from "./projectsData.js";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 

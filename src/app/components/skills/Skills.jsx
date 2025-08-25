@@ -15,7 +15,7 @@ const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
 });
 
-export default function Projects(props) {
+export default function Skills(props) {
   const list = [
     {
       id: 1,

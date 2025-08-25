@@ -241,7 +241,7 @@ export default function TypeAnimations() {
       {displaysIconAnimation == "typeAnimationCompleted" && (
         <section id="socialIconsSection" ref={socialIconsRef}>
           <a
-            href="https://github.com/William-Libero"
+            href="https://github.com/williamLiberoS"
             target="_blank"
             rel="noopener noreferrer"
           >
